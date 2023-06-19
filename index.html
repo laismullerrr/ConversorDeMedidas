@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Conversor</title>
+</head>
+
+<body>
+    <select id="tipo_convertor" name="tipo_convertor" onchange="selecionaConversor(this.value)">
+        <option value="" selected>Selecione</option>
+        <option value="temperatura">Temperatura</option>
+        <option value="comprimento">Comprimento</option>
+        <option value="peso">Peso</option>
+    </select>
+
+    <div id="peso">
+        <label>Quilogramas</label>
+        <input type="number" name="quilogramas" id="quilogramas" value="0.00" min="0.00"
+            onchange="convertorQuilogramas(this.value)">
+        <label>Gramas</label>
+        <input type="number" name="gramas" id="gramas" value="0.00" min="0.00" onchange="convertorGramas(this.value)">
+        <label>Libras</label>
+        <input type="number" name="libras" id="libras" value="0.00" min="0.00" onchange="convertorLibras(this.value)">
+    </div>
+    <div id="temperatura">
+        <label>Fahreinheit</label>
+        <input type="number" name="fahrenheit" id="fahrenheit">
+        <label>Celsius</label>
+        <input type="number" name="celsius" id="celsius">
+        <label>Kelvin</label>
+        <input type="number" name="kelvin" id="kelvin">
+    </div>
+    <div id="comprimento">
+        <label>Metros</label>
+        <input type="number" name="metros" id="metros">
+        <label>Centimetros</label>
+        <input type="number" name="centrimetros" id="centimetros">
+        <label>Polegadas</label>
+        <input type="number" name="polegadas" id="polegadas">
+    </div>
+</body>
+</html>
