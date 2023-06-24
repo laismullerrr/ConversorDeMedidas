@@ -10,13 +10,20 @@
 </head>
 
 <body>
+
+    <section>
+        <div class="titulo_pag">
+            <h1>CONVERSOR DE MEDIDAS</h1>
+        </div>
+    </section>
+
     <section class="divisao-containers">
 
         <div class="container1">
-            
-                <h1 id="titulo1">Selecione o tipo:</h1>
-                
-            
+
+            <h1 id="titulo1">Selecione o tipo:</h1>
+
+
             <select class="tipo_convertor" name="tipo_convertor" onchange="selecionaConversor(this.value)">
                 <option value="" selected>Selecione</option>
                 <option value="temperatura">Temperatura</option>
@@ -27,35 +34,50 @@
 
         <div class="container2">
             <div class="peso" id="peso">
-                <form class="form_peso">
+                <form>
+
                     <label>Quilogramas</label>
                     <input type="number" name="quilogramas" id="quilogramas" value="0.00" min="0.00"
                         onchange="convertorQuilogramas(this.value)">
+                        <br>
+
                     <label>Gramas</label>
                     <input type="number" name="gramas" id="gramas" value="0.00" min="0.00"
                         onchange="convertorGramas(this.value)">
+                        <br>
+
                     <label>Libras</label>
                     <input type="number" name="libras" id="libras" value="0.00" min="0.00"
                         onchange="convertorLibras(this.value)">
+
                 </form>
             </div>
 
 
             <div id="temperatura">
-                <label>Fahreinheit</label>
-                <input type="number" name="fahrenheit" id="fahrenheit">
-                <label>Celsius</label>
-                <input type="number" name="celsius" id="celsius">
-                <label>Kelvin</label>
-                <input type="number" name="kelvin" id="kelvin">
+                <form>
+                    <label>Fahreinheit</label>
+                    <input type="number" name="fahrenheit" id="fahrenheit">
+                    <br>
+                    <label>Celsius</label>
+                    <input type="number" name="celsius" id="celsius">
+                    <br>
+                    <label>Kelvin</label>
+                    <input type="number" name="kelvin" id="kelvin">
+                </form>
             </div>
+
             <div id="comprimento">
-                <label>Metros</label>
-                <input type="number" name="metros" id="metros">
-                <label>Centimetros</label>
-                <input type="number" name="centrimetros" id="centimetros">
-                <label>Polegadas</label>
-                <input type="number" name="polegadas" id="polegadas">
+                <form>
+                    <label>Metros</label>
+                    <input type="number" name="metros" id="metros">
+                    <br>
+                    <label>Centimetros</label>
+                    <input type="number" name="centrimetros" id="centimetros">
+                    <br>
+                    <label>Polegadas</label>
+                    <input type="number" name="polegadas" id="polegadas">
+                </form>
             </div>
         </div>
     </section>

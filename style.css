@@ -1,3 +1,9 @@
+/* .color1 {color: #140f07;}
+.color2 {color: #212a4b;}
+.color3 {color: #585fa6;}
+.color4 {color: #9ca0fa;}
+.color5 {color: #f6eaf5;} */
+
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -6,12 +12,32 @@
 }
 
 body {
-  background-color: black;
+  background-color: #140f07;
   justify-content: center;
-  display: flex;
   align-items: center;
   width: 100%;
   min-height: 100vh;
+  flex-direction: column;
+  /* background-image: url('https://i0.wp.com/textures.world/wp-content/uploads/2018/10/24-Black-Paper-Different-Texture-Types-A4-Stucco-1.jpg?fit=1018%2C720&ssl=1');
+  background-size: cover; 
+  background-repeat: no-repeat;  */
+  display: flex;
+}
+
+.titulo_pag{
+    background-color: #f6eaf5;
+    padding: 7%;
+    width: max-content;
+    border-radius: 8px;
+    margin: 10%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.titulo_pag> h1{
+color: #212a4b;
 }
 
 .divisao-containers {
@@ -22,25 +48,34 @@ body {
   }
 
 .container1 {
-  background-color: rgb(226, 185, 34);
+  background-color: #585fa6;
   border-radius: 8px;
   padding: 10%;
-  width: fit-content;
-  overflow: hidden;
   flex-direction: column;
   margin: 6px;
   display: flex;
   align-items: center;
   text-align: center;
-  
+
+}
+.tipo_convertor {
+    font-size: 24px;
+    border-radius: 5px;
+    background-color: #f6eaf5;
+    border-color:#212a4b ;
+}
+#titulo1{
+    padding: 10%;
+    color: #f6eaf5;
+    border-color: #212a4b;
 }
 .container2 {
-    background-color: rgb(120, 34, 226);
+    background-color: #9ca0fa;
     border-radius: 8px;
-    padding: 10px;
-    width: 100%;
     overflow: hidden;
     margin: 6px;
+    display: block;
+    align-items:center;
   }
 
 #peso {
@@ -55,13 +90,30 @@ body {
 form {
   display: block;
   align-items: center;
+  padding: 15%;
+
 }
+
 form > input {
   display: flex;
   align-items: center;
-  width: 55px;
+  width: 85%;
   text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: none;
+  font-size: 24px;
+  background-color: #f6eaf5;
+  border-color:#212a4b ;
 }
+
+form > label {
+    display: flex;
+    font-size: 24px;
+    font-family:monospace;
+    align-items: center;
+
+  }
 
 #comprimento {
   display: none;
