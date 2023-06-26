@@ -1,10 +1,13 @@
-document.querySelector("#tipo_convertor").addEventListener("change", e => {
+// Event listener para a categoria selecionada
+document.querySelector("#tipo_convertor").addEventListener("change", (e) => {
   const select = e.target;
   var tipoConversor = select.value;
-  selecionaConversor(tipoConversor)
-}) 
+  selecionaConversor(tipoConversor);
+});
 
+// Função que seleciona o conversor com base na categoria selecionada
 function selecionaConversor(tipoConversor) {
+  // Oculta outros conversores e mostra o conversor de temperatura
   if (tipoConversor == "temperatura") {
     document.getElementById("comprimento").style.display = "none";
     document.getElementById("peso").style.display = "none";
@@ -12,6 +15,7 @@ function selecionaConversor(tipoConversor) {
     document.getElementById("instrucoes").style.display = "block";
   }
 
+  // Oculta outros conversores e mostra o conversor de peso
   if (tipoConversor == "peso") {
     document.getElementById("comprimento").style.display = "none";
     document.getElementById("temperatura").style.display = "none";
@@ -19,6 +23,7 @@ function selecionaConversor(tipoConversor) {
     document.getElementById("instrucoes").style.display = "block";
   }
 
+  // Oculta outros conversores e mostra o conversor de comprimento
   if (tipoConversor == "comprimento") {
     document.getElementById("peso").style.display = "none";
     document.getElementById("temperatura").style.display = "none";
@@ -27,6 +32,7 @@ function selecionaConversor(tipoConversor) {
   }
 }
 
+// Event listener para o formulário de conversão de peso, com as funções de cálculo
 document.querySelector("#formPeso").addEventListener("submit", (e) => {
   e.preventDefault();
   const data = new FormData(e.target);
@@ -40,12 +46,14 @@ document.querySelector("#formPeso").addEventListener("submit", (e) => {
     } else if (select1 == "gramas") {
       convertorGramas(select2, valor);
     } else if (select1 == "libras") {
-      convertorLibras(select2, valor);}
+      convertorLibras(select2, valor);
+    }
   } else {
     alert("Os campos precisam ser selecionados e não podem ser iguais!");
   }
 });
 
+// Event listener para o formulário de conversão de comprimento, com as funções de cálculo
 document.querySelector("#formComprimento").addEventListener("submit", (e) => {
   e.preventDefault();
   const data = new FormData(e.target);
@@ -58,7 +66,7 @@ document.querySelector("#formComprimento").addEventListener("submit", (e) => {
       convertorMetros(select2, valor);
     } else if (select1 == "centimetros") {
       convertorCentimetros(select2, valor);
-    }else if (select1 == "polegadas") {
+    } else if (select1 == "polegadas") {
       convertorPolegadas(select2, valor);
     }
   } else {
@@ -66,6 +74,7 @@ document.querySelector("#formComprimento").addEventListener("submit", (e) => {
   }
 });
 
+// Event listener para o formulário de conversão de temperatura, com as funções de cálculo
 document.querySelector("#formTemperatura").addEventListener("submit", (e) => {
   e.preventDefault();
   const data = new FormData(e.target);
@@ -78,27 +87,27 @@ document.querySelector("#formTemperatura").addEventListener("submit", (e) => {
       convertorKelvin(select2, valor);
     } else if (select1 == "celsius") {
       convertorCelsius(select2, valor);
-    }else if (select1 == "fahrenheit") {
+    } else if (select1 == "fahrenheit") {
       convertorFahrenheit(select2, valor);
     }
   } else {
+    // alerta de erro na validação
     alert("Os campos precisam ser selecionados e não podem ser iguais!");
   }
 });
 
+// função de validação no formulário das unidades
 function validaCampos(select1, select2) {
   console.log(select1, select2);
   if (select1 == select2) {
     return false;
   } else if (select1 == "vazio" || select2 == "vazio") {
     return false;
-  // } else if{ 
-  }else {
+    // } else if{
+  } else {
     return true;
   }
 }
-
-
 
 //FUNÇÕES DE CONVERSÃO DE ***PESO***
 function convertorQuilogramas(select2, valor) {
@@ -128,51 +137,51 @@ function convertorLibras(select2, valor) {
 //FUNÇÕES DE CONVERSÃO DE ***TEMPERATURA***
 function convertorKelvin(select2, valor) {
   if (select2 == "fahrenheit") {
-  document.getElementById("valor_conta").value = (valor - 273.15) * 9/5 + 32;
-} else if (select2 == "celsuis") {
-  document.getElementById("valor_conta").value = valor - 273.15;
-}}
+    document.getElementById("valor_conta").value =
+      ((valor - 273.15) * 9) / 5 + 32;
+  } else if (select2 == "celsuis") {
+    document.getElementById("valor_conta").value = valor - 273.15;
+  }
+}
 
 function convertorCelsius(select2, valor) {
   if (select2 == "fahrenheit") {
-  document.getElementById("valor_conta").value = (valor * 9/5) + 32;
-  }else if (select2 == "kelvin") {
-  document.getElementById("valor_conta").value = valor + 273.15;
-}}
+    document.getElementById("valor_conta").value = (valor * 9) / 5 + 32;
+  } else if (select2 == "kelvin") {
+    document.getElementById("valor_conta").value = valor + 273.15;
+  }
+}
 
 function convertorFahrenheit(select2, valor) {
   if (select2 == "kelvin") {
-  document.getElementById("valor_conta").value = (valor - 32) * 5/9 + 273.15;
-}else if (select2 == "celsius") {
-  document.getElementById("valor_conta").value = (valor - 32) * 5/9;
-}}
+    document.getElementById("valor_conta").value =
+      ((valor - 32) * 5) / 9 + 273.15;
+  } else if (select2 == "celsius") {
+    document.getElementById("valor_conta").value = ((valor - 32) * 5) / 9;
+  }
+}
 
 //FUNÇÕES DE CONVERSÃO DE ***COMPRIMENTO***
 function convertorMetros(select2, valor) {
   if (select2 == "centimetros") {
-  document.getElementById("valor_conta").value = valor * 100;
-}else if (select2 == "polegadas") {
-  document.getElementById("valor_conta").value =  valor * 39.37;
-}}
+    document.getElementById("valor_conta").value = valor * 100;
+  } else if (select2 == "polegadas") {
+    document.getElementById("valor_conta").value = valor * 39.37;
+  }
+}
 
 function convertorCentimetros(select2, valor) {
   if (select2 == "metros") {
-  document.getElementById("valor_conta").value = valor / 100;
-}else if (select2 == "polegadas") {
-  document.getElementById("valor_conta").value = valor / 2.54;
-}}
+    document.getElementById("valor_conta").value = valor / 100;
+  } else if (select2 == "polegadas") {
+    document.getElementById("valor_conta").value = valor / 2.54;
+  }
+}
 
 function convertorPolegadas(select2, valor) {
   if (select2 == "centimetros") {
-  document.getElementById("valor_conta").value = valor * 2.54;
-}else if (select2 == "metros") {
-  document.getElementById("valor_conta").value = valor / 39.37;
-}}
-
-var instrucoes = document.getElementById("instrucoes");
-var tipo_convertor = document.getElementById("tipo_convertor");
-
-// tipo_convertor.addEventListener('click', function(){
-//     instrucoes.textContent = 'Novo valor inserido';
-//   });
-
+    document.getElementById("valor_conta").value = valor * 2.54;
+  } else if (select2 == "metros") {
+    document.getElementById("valor_conta").value = valor / 39.37;
+  }
+}
