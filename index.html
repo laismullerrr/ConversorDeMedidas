@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">]
+
+<!-- head da página e importações -->
 
 <head>
     <meta charset="UTF-8">
@@ -9,78 +11,109 @@
     <title>Conversor</title>
 </head>
 
+<!-- body da página  -->
 <body>
-
+    <!-- section com título do projeto -->
     <section>
-        <div class="titulo_pag">
-            <h1>CONVERSOR DE MEDIDAS</h1>
-        </div>
+        <h1 class="titulo_pag">CONVERSOR DE UNIDADES</h1>
     </section>
 
+    <!-- nova section com os 3 containers da página  -->
     <section class="divisao-containers">
 
+        <!-- container 1, com a selecão de categorias -->
         <div class="container1">
-
             <h1 id="titulo1">Selecione o tipo:</h1>
-
-
-            <select class="tipo_convertor" name="tipo_convertor" onchange="selecionaConversor(this.value)">
-                <option value="" selected>Selecione</option>
+            <br>
+            <select class="tipo_convertor" id='tipo_convertor' name="tipo_convertor">
                 <option value="temperatura">Temperatura</option>
                 <option value="comprimento">Comprimento</option>
-                <option value="peso">Peso</option>
+                <option selected value="peso">Peso</option>
             </select>
+            <br>
         </div>
 
-        <div class="container2">
+        <!-- container 2, com a seleção das unidades a serem calculadas e botão de conversão -->
+        <div class="containerForm">
+
+            <!-- select das unidades de PESO -->
             <div class="peso" id="peso">
-                <form>
-
-                    <label>Quilogramas</label>
-                    <input type="number" name="quilogramas" id="quilogramas" value="0.00" min="0.00"
-                        onchange="convertorQuilogramas(this.value)">
-                        <br>
-
-                    <label>Gramas</label>
-                    <input type="number" name="gramas" id="gramas" value="0.00" min="0.00"
-                        onchange="convertorGramas(this.value)">
-                        <br>
-
-                    <label>Libras</label>
-                    <input type="number" name="libras" id="libras" value="0.00" min="0.00"
-                        onchange="convertorLibras(this.value)">
-
+                <form class="formPeso" id="formPeso">
+                    <label>Converter de:</label>
+                    <select name="select_de">
+                        <option value="vazio">Selecione</option>
+                        <option value="quilogramas">Quilogramas</option>
+                        <option value="gramas">Gramas</option>
+                        <option value="libras">Libras</option>
+                    </select>
+                    <br>
+                    <label>Para:</label>
+                    <select name="select_para">
+                        <option value="vazio">Selecione</option>
+                        <option value="quilogramas">Quilogramas</option>
+                        <option value="gramas">Gramas</option>
+                        <option value="libras">Libras</option>
+                    </select>
+                    <button name="enviar">CONVERTER</button>
                 </form>
             </div>
 
-
-            <div id="temperatura">
-                <form>
-                    <label>Fahreinheit</label>
-                    <input type="number" name="fahrenheit" id="fahrenheit">
+            <!-- select das unidades de TEMPERATURA -->
+            <div class="temperatura" id="temperatura">
+                <form id="formTemperatura">
+                    <label>Converter de:</label>
+                    <select name="select_de">
+                        <option value="vazio">Selecione</option>
+                        <option value="fahrenheit">Fahrenheit</option>
+                        <option value="celsius">Celsius</option>
+                        <option value="kelvin">Kelvin</option>
+                    </select>
                     <br>
-                    <label>Celsius</label>
-                    <input type="number" name="celsius" id="celsius">
-                    <br>
-                    <label>Kelvin</label>
-                    <input type="number" name="kelvin" id="kelvin">
+                    <label>Para:</label>
+                    <select name="select_para">
+                        <option value="vazio">Selecione</option>
+                        <option value="fahrenheit">Fahrenheit</option>
+                        <option value="celsius">Celsius</option>
+                        <option value="kelvin">Kelvin</option>
+                    </select>
+                    <button name="enviar">CONVERTER</button>
                 </form>
             </div>
 
-            <div id="comprimento">
-                <form>
-                    <label>Metros</label>
-                    <input type="number" name="metros" id="metros">
+            <!-- select das unidades de COMPRIMENTO -->
+            <div class="comprimento" id="comprimento">
+                <form class="formComprimento" id="formComprimento">
+                    <label>Converter de:</label>
+                    <select name="select_de">
+                        <option value="vazio">Selecione</option>
+                        <option value="metros">Metros</option>
+                        <option value="centimetros">Centímetros</option>
+                        <option value="polegadas">Polegadas</option>
+                    </select>
                     <br>
-                    <label>Centimetros</label>
-                    <input type="number" name="centrimetros" id="centimetros">
-                    <br>
-                    <label>Polegadas</label>
-                    <input type="number" name="polegadas" id="polegadas">
+                    <label>Para:</label>
+                    <select name="select_para">
+                        <option value="vazio">Selecione</option>
+                        <option value="metros">Metros</option>
+                        <option value="centimetros">Centímetros</option>
+                        <option value="polegadas">Polegadas</option>
+                    </select>
+                    <button name="enviar">CONVERTER</button>
                 </form>
             </div>
+        </div>
+
+        <!-- container 3, com o valor a ser inserido e seu resultado -->
+        <div class="resultados">
+            <label>Valor</label>
+            <input type="number" min="0.00" name="numero_converter" id="numero_converter">
+            <br>
+            <label>Resposta</label>
+            <input disabled id="valor_conta">
         </div>
     </section>
+
+    <!-- fim do body da página -->
 </body>
 
 </html>
