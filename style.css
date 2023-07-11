@@ -35,7 +35,7 @@ body {
 
 /* estilização da section que controla os 3 containers */
 .divisao-containers {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   width: 70%;
   padding-block: 1%;
@@ -55,7 +55,7 @@ body {
   text-align: center;
 }
 
-estilização .tipo_convertor {
+.tipo_convertor {
   font-size: 24px;
   border-radius: 5px;
   background-color: #f6eaf5;
@@ -159,6 +159,6 @@ form > button {
 #comprimento {
   display: none;
 }
-#temperatura {
+#formTemperatura {
   display: none;
 }

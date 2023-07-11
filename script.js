@@ -8,7 +8,7 @@ document.querySelector("#tipo_convertor").addEventListener("change", (e) => {
 // Função que seleciona o conversor com base na categoria selecionada
 function selecionaConversor(tipoConversor) {
   // Oculta outros conversores e mostra o conversor de temperatura
-  if (tipoConversor == "temperatura") {
+  if (tipoConversor == "formTemperatura") {
     document.getElementById("comprimento").style.display = "none";
     document.getElementById("peso").style.display = "none";
     document.getElementById("temperatura").style.display = "block";
@@ -18,7 +18,7 @@ function selecionaConversor(tipoConversor) {
   // Oculta outros conversores e mostra o conversor de peso
   if (tipoConversor == "peso") {
     document.getElementById("comprimento").style.display = "none";
-    document.getElementById("temperatura").style.display = "none";
+    document.getElementById("formTemperatura").style.display = "none";
     document.getElementById("peso").style.display = "block";
     document.getElementById("instrucoes").style.display = "block";
   }
@@ -26,7 +26,7 @@ function selecionaConversor(tipoConversor) {
   // Oculta outros conversores e mostra o conversor de comprimento
   if (tipoConversor == "comprimento") {
     document.getElementById("peso").style.display = "none";
-    document.getElementById("temperatura").style.display = "none";
+    document.getElementById("formTemperatura").style.display = "none";
     document.getElementById("comprimento").style.display = "block";
     document.getElementById("instrucoes").style.display = "block";
   }
