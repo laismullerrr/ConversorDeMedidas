@@ -10,22 +10,22 @@ function selecionaConversor(tipoConversor) {
   // Oculta outros conversores e mostra o conversor de temperatura
   if (tipoConversor == "formTemperatura") {
     document.getElementById("formComprimento").style.display = "none";
-    document.getElementById("peso").style.display = "none";
+    document.getElementById("formPeso").style.display = "none";
     document.getElementById("formTemperatura").style.display = "block";
     document.getElementById("instrucoes").style.display = "block";
   }
 
   // Oculta outros conversores e mostra o conversor de peso
-  if (tipoConversor == "peso") {
+  if (tipoConversor == "formPeso") {
     document.getElementById("comprimento").style.display = "none";
     document.getElementById("formTemperatura").style.display = "none";
-    document.getElementById("peso").style.display = "block";
+    document.getElementById("formPeso").style.display = "block";
     document.getElementById("instrucoes").style.display = "block";
   }
 
   // Oculta outros conversores e mostra o conversor de comprimento
   if (tipoConversor == "formComprimento") {
-    document.getElementById("peso").style.display = "none";
+    document.getElementById("formPeso").style.display = "none";
     document.getElementById("formTemperatura").style.display = "none";
     document.getElementById("formComprimento").style.display = "block";
     document.getElementById("instrucoes").style.display = "block";
