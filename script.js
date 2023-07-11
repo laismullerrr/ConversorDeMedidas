@@ -9,9 +9,9 @@ document.querySelector("#tipo_convertor").addEventListener("change", (e) => {
 function selecionaConversor(tipoConversor) {
   // Oculta outros conversores e mostra o conversor de temperatura
   if (tipoConversor == "formTemperatura") {
-    document.getElementById("comprimento").style.display = "none";
+    document.getElementById("formComprimento").style.display = "none";
     document.getElementById("peso").style.display = "none";
-    document.getElementById("temperatura").style.display = "block";
+    document.getElementById("formTemperatura").style.display = "block";
     document.getElementById("instrucoes").style.display = "block";
   }
 
@@ -24,10 +24,10 @@ function selecionaConversor(tipoConversor) {
   }
 
   // Oculta outros conversores e mostra o conversor de comprimento
-  if (tipoConversor == "comprimento") {
+  if (tipoConversor == "formComprimento") {
     document.getElementById("peso").style.display = "none";
     document.getElementById("formTemperatura").style.display = "none";
-    document.getElementById("comprimento").style.display = "block";
+    document.getElementById("formComprimento").style.display = "block";
     document.getElementById("instrucoes").style.display = "block";
   }
 }

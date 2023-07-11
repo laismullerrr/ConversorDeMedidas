@@ -156,7 +156,7 @@ form > button {
 
 
 /* esconder os forms de comprimento e peso, para serem chamados com evento de clique no js */
-#comprimento {
+#formComprimento {
   display: none;
 }
 #formTemperatura {
