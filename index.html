@@ -6,8 +6,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./script.js" defer></script>
-    <link rel="stylesheet" href="./style.css">
+    <script src="./script/script.js" defer></script>
+    <link rel="stylesheet" href="./style/style.css">
     <title>Conversor</title>
 </head>
 
@@ -23,87 +23,91 @@
     <section class="divisao-containers">
 
         <!-- container 1, com a selecão de categorias -->
-        <div class="container1">
-            <h1 id="titulo1">Selecione o tipo:</h1>
-            <br>
+        <div class="selecao">
+            <h1 id="titulo-selecao">Selecione o tipo:</h1>
+            
             <select class="tipo_convertor" id='tipo_convertor' name="tipo_convertor">
                 <option value="temperatura">Temperatura</option>
                 <option value="comprimento">Comprimento</option>
                 <option selected value="peso">Peso</option>
             </select>
-            <br>
+            
         </div>
 
         <!-- container 2, com a seleção das unidades a serem calculadas e botão de conversão -->
         <div class="containerForm">
 
             <!-- select das unidades de PESO -->
-
-            <form class="formPeso" id="formPeso"> 
-                <!-- opções do valor a ser convertido -->
-                <label>Converter de:</label>
-                <select name="select_de">
-                    <option value="vazio">Selecione</option>
-                    <option value="quilogramas">Quilogramas</option>
-                    <option value="gramas">Gramas</option>
-                    <option value="libras">Libras</option>
-                </select>
-                <br>
-                <!-- opções do resultado -->
-                <label>Para:</label>
-                <select name="select_para">
-                    <option value="vazio">Selecione</option>
-                    <option value="quilogramas">Quilogramas</option>
-                    <option value="gramas">Gramas</option>
-                    <option value="libras">Libras</option>
-                </select>
-                <button name="enviar">CONVERTER</button>
-            </form>
-
+            <div class="peso" id="peso">
+                <form class="formPeso" id="formPeso">
+                    <!-- opções do valor a ser convertido -->
+                    <label>Converter de:</label>
+                    <select name="select_de">
+                        <option value="vazio">Selecione</option>
+                        <option value="quilogramas">Quilogramas</option>
+                        <option value="gramas">Gramas</option>
+                        <option value="libras">Libras</option>
+                    </select>
+                    <br>
+                    <!-- opções do resultado -->
+                    <label>Para:</label>
+                    <select name="select_para">
+                        <option value="vazio">Selecione</option>
+                        <option value="quilogramas">Quilogramas</option>
+                        <option value="gramas">Gramas</option>
+                        <option value="libras">Libras</option>
+                    </select>
+                    <button name="enviar">CONVERTER</button>
+                </form>
+            </div>
 
             <!-- select das unidades de TEMPERATURA -->
-            <form id="formTemperatura">
-                <label>Converter de:</label>
-                <!-- opções do valor a ser convertido -->
-                <select name="select_de">
-                    <option value="vazio">Selecione</option>
-                    <option value="fahrenheit">Fahrenheit</option>
-                    <option value="celsius">Celsius</option>
-                    <option value="kelvin">Kelvin</option>
-                </select>
-                <br>
-                <!-- opções do resultado -->
-                <label>Para:</label>
-                <select name="select_para">
-                    <option value="vazio">Selecione</option>
-                    <option value="fahrenheit">Fahrenheit</option>
-                    <option value="celsius">Celsius</option>
-                    <option value="kelvin">Kelvin</option>
-                </select>
-                <button name="enviar">CONVERTER</button>
-            </form>
-            ''
+            <div class="temperatura" id="temperatura">
+                <form id="formTemperatura">
+                    <label>Converter de:</label>
+                    <!-- opções do valor a ser convertido -->
+                    <select name="select_de">
+                        <option value="vazio">Selecione</option>
+                        <option value="fahrenheit">Fahrenheit</option>
+                        <option value="celsius">Celsius</option>
+                        <option value="kelvin">Kelvin</option>
+                    </select>
+                    <br>
+                    <!-- opções do resultado -->
+                    <label>Para:</label>
+                    <select name="select_para">
+                        <option value="vazio">Selecione</option>
+                        <option value="fahrenheit">Fahrenheit</option>
+                        <option value="celsius">Celsius</option>
+                        <option value="kelvin">Kelvin</option>
+                    </select>
+                    <button name="enviar">CONVERTER</button>
+                </form>
+            </div>
+
             <!-- select das unidades de COMPRIMENTO -->
-            <form class="formComprimento" id="formComprimento">
-                <!-- opções do valor a ser convertido -->
-                <label>Converter de:</label>
-                <select name="select_de">
-                    <option value="vazio">Selecione</option>
-                    <option value="metros">Metros</option>
-                    <option value="centimetros">Centímetros</option>
-                    <option value="polegadas">Polegadas</option>
-                </select>
-                <br>
-                <!-- opções do resultado -->
-                <label>Para:</label>
-                <select name="select_para">
-                    <option value="vazio">Selecione</option>
-                    <option value="metros">Metros</option>
-                    <option value="centimetros">Centímetros</option>
-                    <option value="polegadas">Polegadas</option>
-                </select>
-                <button name="enviar">CONVERTER</button>
-            </form>
+            <div class="comprimento" id="comprimento">
+                <form class="formComprimento" id="formComprimento">
+                    <!-- opções do valor a ser convertido -->
+                    <label>Converter de:</label>
+                    <select name="select_de">
+                        <option value="vazio">Selecione</option>
+                        <option value="metros">Metros</option>
+                        <option value="centimetros">Centímetros</option>
+                        <option value="polegadas">Polegadas</option>
+                    </select>
+                    <br>
+                    <!-- opções do resultado -->
+                    <label>Para:</label>
+                    <select name="select_para">
+                        <option value="vazio">Selecione</option>
+                        <option value="metros">Metros</option>
+                        <option value="centimetros">Centímetros</option>
+                        <option value="polegadas">Polegadas</option>
+                    </select>
+                    <button name="enviar">CONVERTER</button>
+                </form>
+            </div>
         </div>
 
         <!-- container 3, com o valor a ser inserido e seu resultado -->

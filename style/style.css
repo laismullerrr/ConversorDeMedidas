@@ -35,7 +35,7 @@ body {
 
 /* estilização da section que controla os 3 containers */
 .divisao-containers {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   width: 70%;
   padding-block: 1%;
@@ -44,10 +44,10 @@ body {
 }
 
 /* estilização do container 1, com a seleção das categorias */
-.container1 {
+.selecao {
   background-color: #585fa6;
   border-radius: 8px;
-  padding: 2%;
+  padding: 4%;
   flex-direction: column;
   margin-left: 20px;
   display: flex;
@@ -55,14 +55,14 @@ body {
   text-align: center;
 }
 
-.tipo_convertor {
+estilização .tipo_convertor {
   font-size: 24px;
   border-radius: 5px;
   background-color: #f6eaf5;
   border-color: #212a4b;
   font-family: monospace;
 }
-#titulo1 {
+#titulo-selecao {
   padding: 10%;
   color: #f6eaf5;
   border-color: #212a4b;
@@ -71,14 +71,14 @@ body {
 }
 
 /* estilização do container 2, com a seleção das unidades de medida */
-.container2 {
+/* .container2 {
   background-color: #9ca0fa;
   border-radius: 8px;
   overflow: hidden;
   margin: 6px;
   display: block;
   align-items: center;
-}
+} */
 
 /* definições padrão dos forms de seleção de unidades, dentro do container 2 */
 .containerForm {
@@ -156,9 +156,9 @@ form > button {
 
 
 /* esconder os forms de comprimento e peso, para serem chamados com evento de clique no js */
-#formComprimento {
+#comprimento {
   display: none;
 }
-#formTemperatura {
+#temperatura {
   display: none;
 }
