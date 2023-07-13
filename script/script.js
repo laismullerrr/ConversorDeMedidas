@@ -40,7 +40,7 @@ document.querySelector("#formPeso").addEventListener("submit", (e) => {
   var select1 = entries["select_de"];
   var select2 = entries["select_para"];
   if (validaCampos(select1, select2)) {
-    const valor = document.getElementById("numero_converter").value;
+    const valor = document.getElementById("valor").value;
     if (select1 == "quilogramas") {
       convertorQuilogramas(select2, valor);
     } else if (select1 == "gramas") {
@@ -61,7 +61,7 @@ document.querySelector("#formComprimento").addEventListener("submit", (e) => {
   var select1 = entries["select_de"];
   var select2 = entries["select_para"];
   if (validaCampos(select1, select2)) {
-    const valor = document.getElementById("numero_converter").value;
+    const valor = document.getElementById("valor").value;
     if (select1 == "metros") {
       convertorMetros(select2, valor);
     } else if (select1 == "centimetros") {
@@ -82,7 +82,7 @@ document.querySelector("#formTemperatura").addEventListener("submit", (e) => {
   var select1 = entries["select_de"];
   var select2 = entries["select_para"];
   if (validaCampos(select1, select2)) {
-    const valor = document.getElementById("numero_converter").value;
+    const valor = document.getElementById("valor").value;
     if (select1 == "kelvin") {
       convertorKelvin(select2, valor);
     } else if (select1 == "celsius") {
