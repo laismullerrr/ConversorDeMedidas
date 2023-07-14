@@ -113,76 +113,76 @@ function validaCampos(select1, select2) {
 //FUNÇÕES DE CONVERSÃO DE ***PESO***
 function convertorQuilogramas(select2, valor) {
   if (select2 == "gramas") {
-    document.getElementById("resultado").value = valor * 1000;
+    document.getElementById("resultadoPeso").value = valor * 1000;
   } else if (select2 == "libras") {
-    document.getElementById("resultado").value = valor * 2.20462;
+    document.getElementById("resultadoPeso").value = valor * 2.20462;
   }
 }
 
 function convertorGramas(select2, valor) {
   if (select2 == "quilogramas") {
-    document.getElementById("resultado").value = valor / 1000;
+    document.getElementById("resultadoPeso").value = valor / 1000;
   } else if (select2 == "libras") {
-    document.getElementById("resultado").value = valor / 453.6;
+    document.getElementById("resultadoPeso").value = valor / 453.6;
   }
 }
 
 function convertorLibras(select2, valor) {
   if (select2 == "quilogramas") {
-    document.getElementById("resultado").value = valor / 2.20462;
+    document.getElementById("resultadoPeso").value = valor / 2.20462;
   } else if (select2 == "gramas") {
-    document.getElementById("resultado").value = valor * 453.6;
+    document.getElementById("resultadoPeso").value = valor * 453.6;
   }
 }
 
 //FUNÇÕES DE CONVERSÃO DE ***TEMPERATURA***
 function convertorKelvin(select2, valor) {
   if (select2 == "fahrenheit") {
-    document.getElementById("resultado").value =
+    document.getElementById("resultadoTemp").value =
       ((valor - 273.15) * 9) / 5 + 32;
   } else if (select2 == "celsuis") {
-    document.getElementById("resultado").value = valor - 273.15;
+    document.getElementById("resultadoTemp").value = valor - 273.15;
   }
 }
 
 function convertorCelsius(select2, valor) {
   if (select2 == "fahrenheit") {
-    document.getElementById("resultado").value = (valor * 9) / 5 + 32;
+    document.getElementById("resultadoTemp").value = (valor * 9) / 5 + 32;
   } else if (select2 == "kelvin") {
-    document.getElementById("resultado").value = valor + 273.15;
+    document.getElementById("resultadoTemp").value = valor + 273.15;
   }
 }
 
 function convertorFahrenheit(select2, valor) {
   if (select2 == "kelvin") {
-    document.getElementById("resultado").value =
+    document.getElementById("resultadoTemp").value =
       ((valor - 32) * 5) / 9 + 273.15;
   } else if (select2 == "celsius") {
-    document.getElementById("resultado").value = ((valor - 32) * 5) / 9;
+    document.getElementById("resultadoTemp").value = ((valor - 32) * 5) / 9;
   }
 }
 
 //FUNÇÕES DE CONVERSÃO DE ***COMPRIMENTO***
 function convertorMetros(select2, valor) {
   if (select2 == "centimetros") {
-    document.getElementById("resultado").value = valor * 100;
+    document.getElementById("resultadoComprimento").value = valor * 100;
   } else if (select2 == "polegadas") {
-    document.getElementById("resultado").value = valor * 39.37;
+    document.getElementById("resultadoComprimento").value = valor * 39.37;
   }
 }
 
 function convertorCentimetros(select2, valor) {
   if (select2 == "metros") {
-    document.getElementById("resultado").value = valor / 100;
+    document.getElementById("resultadoComprimento").value = valor / 100;
   } else if (select2 == "polegadas") {
-    document.getElementById("resultado").value = valor / 2.54;
+    document.getElementById("resultadoComprimento").value = valor / 2.54;
   }
 }
 
 function convertorPolegadas(select2, valor) {
   if (select2 == "centimetros") {
-    document.getElementById("resultado").value = valor * 2.54;
+    document.getElementById("resultadoComprimento").value = valor * 2.54;
   } else if (select2 == "metros") {
-    document.getElementById("resultado").value = valor / 39.37;
+    document.getElementById("resultadoComprimento").value = valor / 39.37;
   }
 }

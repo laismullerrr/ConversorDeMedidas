@@ -94,10 +94,12 @@ body {
 
 /* estilização do container 3, com o resultado dos calculos */
 .resultados {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background-color: #585fa6;
   font-family: monospace;
   padding: 5%;
+  margin-top: 20px;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -122,10 +124,23 @@ body {
   font-size: 18px;
 }
 
+/* form > button {
+  text-align: center;
+  padding: 2%;
+  background-color: #212a4b;
+  border-radius: 3px;
+  box-shadow: none;
+  border: #f6eaf5;
+  font-family: monospace;
+  color: #f6eaf5;
+  cursor: pointer;
+  margin: 3%; */
+
 /* definições padrão de todos os forms da página  */
 
 form{
   padding: 15px;
+  
 }
 
 form>label{
@@ -142,6 +157,19 @@ form > select {
   font-family: monospace;
   border-color: #212a4b;
   font-size: 18px;
+  margin-top: 10px;
+}
+form>input{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  background-color: #f6eaf5;
+  border-radius: 4px;
+  font-family: monospace;
+  border-color: #212a4b;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 form > label {
   display: flex;
@@ -150,7 +178,6 @@ form > label {
   align-items: center;
 }
 form > button {
-  text-align: center;
   padding: 2%;
   background-color: #212a4b;
   border-radius: 3px;
@@ -159,13 +186,10 @@ form > button {
   font-family: monospace;
   color: #f6eaf5;
   cursor: pointer;
-  margin: 3%;
-  margin-left: 39%;
+ width: 100%;
+ 
 }
 
-.resultados>label{
-  padding-top:7px;
-}
 
 
 /* esconder os forms de comprimento e peso, para serem chamados com evento de clique no js */

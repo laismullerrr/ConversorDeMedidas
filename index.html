@@ -25,13 +25,13 @@
         <!-- container 1, com a selecão de categorias -->
         <div class="selecao">
             <h1 id="titulo-selecao">Selecione o tipo:</h1>
-            
+
             <select class="tipo_convertor" id='tipo_convertor' name="tipo_convertor">
                 <option value="temperatura">Temperatura</option>
                 <option value="comprimento">Comprimento</option>
                 <option selected value="peso">Peso</option>
             </select>
-            
+
         </div>
 
         <!-- container 2, com a seleção das unidades a serem calculadas e botão de conversão -->
@@ -48,7 +48,7 @@
                         <option value="gramas">Gramas</option>
                         <option value="libras">Libras</option>
                     </select>
-                    
+
                     <!-- opções do resultado -->
                     <label>Para:</label>
                     <select name="select_para">
@@ -57,7 +57,15 @@
                         <option value="gramas">Gramas</option>
                         <option value="libras">Libras</option>
                     </select>
+
+                    <label>Valor</label>
+                    <input type="number" min="0.00" name="valor" id="valor">
                     <button name="enviar">CONVERTER</button>
+
+                    <label>Resultado</label>
+                    <input disabled id="resultadoPeso">
+
+
                 </form>
             </div>
 
@@ -72,7 +80,7 @@
                         <option value="celsius">Celsius</option>
                         <option value="kelvin">Kelvin</option>
                     </select>
-                    
+
                     <!-- opções do resultado -->
                     <label>Para:</label>
                     <select name="select_para">
@@ -81,7 +89,14 @@
                         <option value="celsius">Celsius</option>
                         <option value="kelvin">Kelvin</option>
                     </select>
+
+                    <label>Valor</label>
+                    <input type="number" min="0.00" name="valor" id="valor">
                     <button name="enviar">CONVERTER</button>
+
+                    <label>Resultado</label>
+                    <input disabled id="resultadoTemp">
+
                 </form>
             </div>
 
@@ -96,7 +111,7 @@
                         <option value="centimetros">Centímetros</option>
                         <option value="polegadas">Polegadas</option>
                     </select>
-                    
+
                     <!-- opções do resultado -->
                     <label>Para:</label>
                     <select name="select_para">
@@ -105,19 +120,25 @@
                         <option value="centimetros">Centímetros</option>
                         <option value="polegadas">Polegadas</option>
                     </select>
+                    
+                    <label>Valor</label>
+                    <input type="number" min="0.00" name="valor" id="valor">
                     <button name="enviar">CONVERTER</button>
+
+                    <label>Resultado</label>
+                    <input disabled id="resultadoComprimento">
                 </form>
             </div>
         </div>
 
         <!--  valor a ser inserido e seu resultado -->
-        <div class="resultados">
+        <!-- <div class="resultados">
             <label>Valor</label>
             <input type="number" min="0.00" name="valor" id="valor">
-            
+
             <label>Resultado</label>
             <input disabled id="resultado">
-        </div>
+        </div> -->
     </section>
 
     <!-- fim do body da página -->
