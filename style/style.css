@@ -55,7 +55,7 @@ body {
   text-align: center;
 }
 
-estilização .tipo_convertor {
+.tipo_convertor {
   font-size: 24px;
   border-radius: 5px;
   background-color: #f6eaf5;
@@ -123,6 +123,15 @@ estilização .tipo_convertor {
 }
 
 /* definições padrão de todos os forms da página  */
+
+form{
+  padding: 15px;
+}
+
+form>label{
+  padding-top:7px;
+}
+
 form > select {
   display: flex;
   align-items: center;
@@ -152,6 +161,10 @@ form > button {
   cursor: pointer;
   margin: 3%;
   margin-left: 39%;
+}
+
+.resultados>label{
+  padding-top:7px;
 }
 
 
